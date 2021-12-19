@@ -39,3 +39,6 @@ $hook['display_override'][] =array(
     'filename' => 'compress.php',
     'filepath' => 'hooks'
 );
+
+3- criar o arquivo compress.php no diretório hooks
+4- segue congfigurações no arquivo compress.php (ver comandos)
