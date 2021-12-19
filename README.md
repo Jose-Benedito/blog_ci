@@ -28,3 +28,14 @@ RewriteCond ^(.*)$ index.php/$1 [L] //regra de reescrita da Url, onde ele recupe
 
  example.com/index.php/blog/
 OBS: NÃO ESQUECER DE COLOCAR  index.php/   ANTES DA PÁGINA REQUERIDA
+
+## Trabalhando com Hooks (mimificação do html)
+1- habilitar o hooks nas variáveis de configuração em config.php (mude para TRUE)
+2- Adicionar configuração do  hooks em hooks.php como:
+
+$hook['display_override'][] =array(
+    'class' => '',
+    'function' => 'compress',
+    'filename' => 'compress.php',
+    'filepath' => 'hooks'
+);
