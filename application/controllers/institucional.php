@@ -1,6 +1,5 @@
-<?php 
-defined('BASEPATH')OR exit('No direct script acess allowed');
 
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Institucional extends CI_Controller {
     public function index()
     {
@@ -8,8 +7,8 @@ class Institucional extends CI_Controller {
     }
 
     public function Empresa(){
-        echo "página empresa";
-        //$this->load->view('empresa');
+    
+        $this->load->view('welcome_message');
     
     }
     public function Servicos(){
