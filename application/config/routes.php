@@ -3,7 +3,7 @@
 
 $route['default_controller'] = "institucional";
 $route['empresa'] = "institucional/Empresa";
-$route['servicos'] = "institucional/Servicos";
+$route['servicos'] = "/Servicos";
 $route['404_override'] = '';
 
 
