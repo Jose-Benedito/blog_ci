@@ -23,3 +23,8 @@ RewriteCond ^(.*)$ index.php/$1 [L] //regra de reescrita da Url, onde ele recupe
  </IfModule>
 
  4 Criar as páginas relacionadas  no diretório views 
+
+ 5 ACESSAR O ENDEREÇO COMO NO EXEMPLO:
+
+ example.com/index.php/blog/
+OBS: NÃO ESQUECER DE COLOCAR  index.php/   ANTES DA PÁGINA REQUERIDA

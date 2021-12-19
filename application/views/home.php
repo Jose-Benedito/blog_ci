@@ -9,13 +9,13 @@
     <title>Document</title>
 </head>
 <body class="text-center">
-
+  
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
          <?php $this->load->view('commons/menu') ?>
         </div>
-      </header>
+  
 
       <main role="main" class="inner cover">
         <h1 class="cover-heading">Apredendo através da prática.</h1>

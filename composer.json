@@ -1,0 +1,16 @@
+{
+    "name": "bene/projetoci",
+    "description": "projeto teste usando o framework Codeigniter",
+    "autoload": {
+        "psr-4": {
+            "Bene\\Projetoci\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "benedito",
+            "email": "benethowen@yahoo.com.br"
+        }
+    ],
+    "require": {}
+}
