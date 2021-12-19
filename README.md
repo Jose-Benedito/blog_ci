@@ -1,9 +1,25 @@
-# CodeIgniter 2
-Open Source PHP Framework (originally from EllisLab)
+# acessando os assets com a base_url
 
-For more info, please refer to the user-guide at http://www.codeigniter.com/userguide2/  
-(also available within the download package for offline use)
+declarar o s link para acesso aos arquivos css, js, img no diretório assets
 
-**WARNING:** *CodeIgniter 2.x is no longer under development and only receives security patches until October 31st, 2015.
-Please update your installation to the latest CodeIgniter 3.x version available
-(upgrade instructions [here](http://www.codeigniter.com/userguide3/installation/upgrade_300.html)).*
+# <link rel="stylesheet" href="<?=base_url('assets/css/cover.css')?>" >
+
+obs- adicionar o caminho ('url') no arquivo autoload.php em:
+
+# $autoload['helper'] = array('url');
+
+## acessa páginas
+1- configurar as classes(funcões para as páginas) nas páginas criadas no Controllers
+2- incluir as páginas nas rotas em router.php.
+3- configurar o arquivo .htacess: (responsável por diversas configurações do servidor Apache)
+Obs: Nõ funciona no windows (usar  web.config- pesquisar)
+
+<IfModule mod_rewrite.c> # modo de escrita
+ RewriteEngine On            // ativa a engine de escrita das Urls
+ RewriteCond %{REQUEST_FILENAME} !-f 
+ RewriteCond %{REQUEST_FILENAME} !-d  //se o arquivo  com o nome  não existir segue a regra de reescrita a seguir
+
+RewriteCond ^(.*)$ index.php/$1 [L] //regra de reescrita da Url, onde ele recupera o valor passado logo após o domínio
+ </IfModule>
+
+ 4 Criar as páginas relacionadas  no diretório views 
