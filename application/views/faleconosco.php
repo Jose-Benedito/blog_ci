@@ -5,30 +5,43 @@
         <h1>Fale Conosco</h1>
     </div>
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-8"> 
+            <!--Informa a mensagem  da validação -->
+            <?php if($formErrors) {?>
+            <div class="alert alert-danger">
+                <?=$formErrors?>
+            </div>
+            <?php } else{
+                if($this->session->flashdata('success_msg')){?>
+            <div>
+                <?=$this->session->flashdata('success_msg')?>
+            </div class="alert alert-success">    
+            <?php }} ?>
+            <!--Informa a mensagem  da validação -->
+
             <form class="form-horizontal" method="POST" action="">
                 <div class="form-group">
                     <label class="col-md-2 control-label" for="nome">Nome</label>
                     <div class="col-md-8">
-                        <input id="nome" name="nome" placeholder="Nome" class="form-control input-md" required="" type="text">
+                        <input id="nome" name="nome" placeholder="Nome" class="form-control input-md" required="" type="text" value="<?=set_value('nome')?>">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-2 control-label" for="email">Email</label>
                     <div class="col-md-8">
-                        <input id="email" name="email" placeholder="Email" class="form-control input-md" required="" type="text">
+                        <input id="email" name="email" placeholder="Email" class="form-control input-md" required="" type="text" value="<?=set_value('email')?>">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-2 control-label" for="assunto">Assunto</label>
                     <div class="col-md-8">
-                        <input id="assunto" name="assunto" placeholder="Assunto" class="form-control input-md" required="" type="text">
+                        <input id="assunto" name="assunto" placeholder="Assunto" class="form-control input-md" required="" type="text" value="<?=set_value('assunto')?>">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-2 control-label" for="mensagem">Mensagem</label>
                     <div class="col-md-8">
-                        <textArea id="mensagem" name="mensagem" class="form-control" row="10">Mensagem</textArea>
+                        <textArea id="mensagem" name="mensagem" class="form-control" row="10"><?=set_value('mensagem')?></textArea>
                     </div>
                 </div>
                 <div class="form-group">

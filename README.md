@@ -49,3 +49,6 @@ $hook['display_override'][] =array(
 $this->output->cache(1440) //Corresponde a 24 horas até o cache ser atualizado
 
 $this->output->delete_cache('NOME DA PÀGINA') //para remover o cache
+
+## Para as set_rules
+$this->form_validation->set_rules(nome_do_campo, descrição_do-camṕo, regras_de_validação_aninhadas)
