@@ -42,3 +42,10 @@ $hook['display_override'][] =array(
 
 3- criar o arquivo compress.php no diretório hooks
 4- segue congfigurações no arquivo compress.php (ver comandos)
+
+##Criação de cache parq as páginas 
+(diretamente no método do controller que carrega a view)
+
+$this->output->cache(1440) //Corresponde a 24 horas até o cache ser atualizado
+
+$this->output->delete_cache('NOME DA PÀGINA') //para remover o cache

@@ -3,6 +3,13 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class Home extends CI_Controller {
+    // Configuração para o cache global das páginas
+    public function __construct()
+    {
+        parent::__construct();
+        $this->output->cache(1440); //corrensponde a 24 horas até o  cache ser atualizado
+        
+    }
     public function index()
     {
      //debug:  echo 'página home';

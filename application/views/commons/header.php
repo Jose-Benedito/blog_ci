@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body class="fig">
 
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
         <header class="masthead mb-auto">

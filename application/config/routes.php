@@ -8,3 +8,6 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['empresa'] = 'home/empresa';
 $route['servicos'] = 'home/servicos';
+
+$route['faleconosco'] = 'contato/FaleConosco';
+$route['trabalheconosco'] = 'contato/TrabalheConosco';
